@@ -1,3 +1,5 @@
+import { GithubIcon, LinkedinIcon } from "./svgIcons"
+
 export function Panel() {
 
     let amp = "\u0026"
@@ -9,13 +11,16 @@ export function Panel() {
                 <h1>Joseph</h1>
             </div>
             <div className="menu panelItem">
-                <a className="menuOption" id="homeButton">Home</a>
-                <a className="menuOption" id="aboutButton">About</a>
-                <a className="menuOption" id="expButton">Education {amp} Experience</a>
-                <a className="menuOption" id="portfolioButton">Portfolio</a>
-                <a className="menuOption" id="contactButton">Contact</a>
+                <a className="menuOption" id="homeButton" href="#">Home</a>
+                <a className="menuOption" id="aboutButton" href="#">About</a>
+                <a className="menuOption" id="expButton" href="#">Education {amp} Experience</a>
+                <a className="menuOption" id="portfolioButton" href="#">Portfolio</a>
+                <a className="menuOption" id="contactButton" href="#">Contact</a>
             </div>
-            <div className= "panelItem" id="menuContacts">Contacts</div>
+            <div className= "panelItem" id="menuContacts">
+                <LinkedinIcon />
+                <GithubIcon />
+            </div>
         </div>
     )
 }

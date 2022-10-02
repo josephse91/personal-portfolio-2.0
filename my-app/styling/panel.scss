@@ -2,16 +2,14 @@
 
 .panel {
   background-color: $dominate;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; 
+  display: grid;
+  grid-template-rows: 2fr 3fr 5rem;
+  grid-template-columns: 1fr;
   border: 1px black solid;
   width: 30rem; 
 }
 
 .menu {
-  height: 55%;
   display: flex;
   flex-direction: column; 
   font-size: 2rem;
@@ -29,8 +27,13 @@
 }
 
 .panelItem {
-  width: 100%;
-  border: 1px black solid;
+  border: 1px red solid;
+}
+
+#menuContacts {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #thumbnail {
@@ -38,7 +41,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 35%;
 }
 
 #smallPic {
@@ -47,12 +49,24 @@
   height: 15rem;
 }
 
-#menuContacts {
-  height: 15%;
-}
-
 .content {
   width: 100%;
+}
+
+.contactSymbol {
+  height: 5rem;
+  width: 5rem;
+}
+
+.githubSymbol {
+  fill: $accent;
+}
+.outerLI {
+  fill: $accent;
+}
+
+.innerLI {
+  fill: $dominate;
 }
 
 
