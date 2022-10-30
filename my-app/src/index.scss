@@ -1,6 +1,7 @@
 @import "../styling/panel.scss";
 @import "../styling/content.scss";
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap');
+@import "../styling/progressBar.scss";
 
 * {
   font-size: 10px;
@@ -22,7 +23,7 @@ code {
     monospace;
 }
 
-.app {
+#app {
   display: flex;
   // min-width: 100vw;
   min-height: 100vh;

@@ -2,7 +2,7 @@ import {Panel,Content} from "./appComponents"
 
 function App() {
   return (
-    <div className="app">
+    <div id="app">
       <Panel />
       <Content />
     </div>

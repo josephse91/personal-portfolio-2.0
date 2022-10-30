@@ -1,0 +1,71 @@
+@import "./styling/colors.scss";
+
+.inception {
+    background-color: rgb(9, 255, 0);
+    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 3rem;
+}
+
+.preparation {
+    background-color: rgb(6, 183, 0);
+    justify-content: space-between;
+    width: 50%;
+}
+
+.success {
+    background-color: rgb(4, 108, 0);
+    border-bottom-right-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+.status {
+    position: relative;
+    width: 33%;
+    color: $accent;
+    font-size: 1.25rem;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.progressBar {
+    height: 100px;
+    min-width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.corner {
+    height:100%;
+    width: 10%;
+    z-index: 1;
+}
+
+.leftEdge {
+    background: linear-gradient(135deg, $subdom 50%, rgba(2,3,38,0) 53%)
+}
+
+.rightEdge {
+    background: linear-gradient(135deg, rgba(2,3,38,0) 50%,$subdom 53%)
+}
+
+#statusLoader {
+    position: absolute;
+    width:50%;
+    height: 100%;
+    background-color: blue;
+    border-bottom-right-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+
+/* The statusLoader class will be placed on a created div when a status div has been hovered over. When you stop hovering, we want to remove the div.
+
+A second class should be added to the created div. This should be the class of the respective inception, preparation or success class
+
+possibly want the loader to decriment while you're not hovered.
+
+*/

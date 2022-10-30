@@ -1,6 +1,7 @@
 import { GithubIcon, LinkedinIcon } from "./svgIcons"
 import selfIcon from "./images/Icon picture.png"
 import languages from "./images/Language_Collection.png"
+import {ProgressBar} from "./progressBar"
 
 export function Panel() {
 
@@ -40,7 +41,9 @@ export function Content() {
 
 function Home() {
     return(
-        <div className="home"></div>
+        <div className="home">
+            <ProgressBar />
+        </div>
     )
 }
 
