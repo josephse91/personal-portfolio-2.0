@@ -17,8 +17,14 @@ export function ProgressBar(props) {
 
     let setWidth = function() {
         let loadDiv = document.getElementById("statusLoader");
-        loadDiv.style.width = width + "%";
+        if (loadDiv) {
+            loadDiv.style.width = width + "%";
+        } else {
+            widthUpdate(0);
+        }
     }
+
+    let testDiv = (<div>Hello There</div>)
 
     let loadingDiv = function(e) {
         e.preventDefault();
@@ -27,6 +33,9 @@ export function ProgressBar(props) {
         let statusCheck = classes[0];
         let selectedClass = classes[1];
 
+        let prevContent = document.getElementById("content").innerHTML;
+        // document.getElementById("content").innerHTML = prevContent + testDiv
+        console.log(prevContent)
         if (!created && statusCheck === "status") {
             loaderUpdate(!loader)
             let loaderDiv = document.createElement("div");
@@ -36,10 +45,9 @@ export function ProgressBar(props) {
         } else {
             if (created) created.remove();
             loaderUpdate(!loader);
-            widthUpdate(0);
         }
 
-        console.log(width)
+        console.log(loader,width)
     }
 
     let placeloadingClass = function(e) {

@@ -32,7 +32,7 @@ export function Panel() {
 
 export function Content() {
     return(
-        <div className="content">
+        <div id="content">
             <Home />
             <About />
         </div>
