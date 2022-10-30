@@ -1,4 +1,6 @@
 @import "../styling/panel.scss";
+@import "../styling/content.scss";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap');
 
 * {
   font-size: 10px;
@@ -8,9 +10,9 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Merriweather', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,7 +24,7 @@ code {
 
 .app {
   display: flex;
-  min-width: 100vw;
+  // min-width: 100vw;
   min-height: 100vh;
   align-items: stretch;
 }

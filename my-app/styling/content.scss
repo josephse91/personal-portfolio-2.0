@@ -1,0 +1,38 @@
+.content {
+    overflow-y: scroll;
+}
+
+.home {
+    background-color: grey;
+    height: 100%;
+}
+
+.about {
+    background-color: white;
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+.langContainer {
+    width: 50%;
+    border: 1px solid;
+}
+
+.langImg {
+    width: 100%;
+}
+.aboutMeContainer {
+    padding: 0rem 5rem;
+}
+
+#aboutMeHeader {
+    display: inline-block;
+    font-size: 5rem;
+    font-weight: 900;
+
+    span {
+        font-size: 5rem;
+        font-weight: 900;
+        color: $accent;
+    }
+}
