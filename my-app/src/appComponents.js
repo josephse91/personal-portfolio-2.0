@@ -34,24 +34,41 @@ export function Content(props) {
 
     return(
         <div id="content">
-            <Home loadingDiv={props.loadingDiv}/>
-            <About />
+            <Home />
+            <About loadingDiv={props.loadingDiv}/>
         </div>
     )
 }
 
-function Home(props) {
+function Home() {
     return(
         <div className="home">
-            <ProgressBar loadingDiv={props.loadingDiv}/>
         </div>
     )
 }
 
-function About() {
+function About(props) {
     return(
         <div className="about">
-            <div className="langContainer"><img className="langImg" src={languages} /></div>
+            <div className="pathContainer">
+                <h1 id="pathTitle">Journey of Learning</h1>
+                <div id="mechanical_engineer" className="journeyOuterContainer">
+                    <h1>Mechanical Engineering</h1>
+                    <ProgressBar loadingDiv={props.loadingDiv} />
+                </div>
+                <div id="investment_advisor" className="journeyOuterContainer">
+                    <h1>Investment Advisor</h1>
+                    <ProgressBar loadingDiv={props.loadingDiv} />
+                </div>
+                <div id="real_estate" className="journeyOuterContainer">
+                    <h1>Real Estate</h1>
+                    <ProgressBar loadingDiv={props.loadingDiv} />
+                </div>
+                <div id="software_engineering" className="journeyOuterContainer">
+                    <h1>Software Engineering</h1>
+                    <ProgressBar loadingDiv={props.loadingDiv} />
+                </div>
+            </div>
             <div className="aboutMeContainer">
                 <h1 id="aboutMeHeader">About <span>Me</span></h1>
             </div>

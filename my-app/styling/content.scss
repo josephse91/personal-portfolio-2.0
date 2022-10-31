@@ -14,9 +14,14 @@
     margin-top: 2.5rem;
 }
 
-.langContainer {
+.pathContainer {
     width: 50%;
-    border: 1px solid;
+}
+
+#pathTitle {
+    margin-top: 1.5rem;
+    font-size: 5rem;
+    color: $subdom;
 }
 
 .langImg {
@@ -36,4 +41,23 @@
         font-weight: 900;
         color: $accent;
     }
+}
+
+.journeyOuterContainer {
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        color: $secondAccent;
+    }
+    width: 60%;
+}
+
+.journeyTitle {
+    font-size: 2.5rem;
+    margin: 1rem 0rem;
+}
+
+.journeyText {
+    font-size: 1.5rem;
 }

@@ -36,8 +36,17 @@ function App() {
     let statusCheck = classes[0];
     let selectedClass = classes[1];
 
-    let journeySelect = e.target.parentElement.parentElement.className;
-    setJourney(journeySelect);
+    let journeySelect = e.target.parentElement.previousSibling.innerHTML;
+    let stage = e.target.innerText;
+
+    let journeyDetails = {
+      journeySelect: journeySelect,
+      stage: stage
+    }
+    setJourney(() => ({
+      ...journeyDetails
+    }));
+    // console.log(journeyType)
     
     if (!created && statusCheck === "status") {
         loaderUpdate(true)
@@ -49,7 +58,6 @@ function App() {
         if (created) created.remove();
         loaderUpdate(false);
     }
-    console.log(width)
   }
 
   let visible = function() {
@@ -58,8 +66,6 @@ function App() {
       loaderUpdate(false);
       let journey = document.getElementById("journeyContainer")
       journey.style.zIndex = "2";
-      
-      console.log("ran Visible:",journey, journey.style.zIndex)
       progressStatus(0);
     }
   }
@@ -74,11 +80,9 @@ function App() {
     progressStatus(0);
   }
 
-  let journeySelect = journeyType;
-
   return (
     <div id="app">
-      <Journey journeySelect={journeySelect} close={close}/>
+      <Journey journey={journeyType} close={close}/>
       <Panel />
       <Content loadingDiv={loadingDiv}/>
     </div>
