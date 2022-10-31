@@ -11,17 +11,23 @@
 .about {
     background-color: white;
     display: flex;
-    margin-top: 2.5rem;
 }
 
 .pathContainer {
     width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 #pathTitle {
     margin-top: 1.5rem;
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: $subdom;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    background-color: $dominate;
 }
 
 .langImg {
@@ -43,6 +49,9 @@
     }
 }
 
+.allJourneys {
+    width: 60%;
+}
 .journeyOuterContainer {
     h1 {
         text-align: center;
@@ -50,7 +59,7 @@
         margin-top: 1rem;
         color: $secondAccent;
     }
-    width: 60%;
+    width: 100%;
 }
 
 .journeyTitle {

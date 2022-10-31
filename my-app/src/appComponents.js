@@ -1,7 +1,8 @@
-import { GithubIcon, LinkedinIcon } from "./svgIcons"
-import selfIcon from "./images/Icon picture.png"
-import languages from "./images/Language_Collection.png"
-import {ProgressBar} from "./progressBar"
+import { GithubIcon, LinkedinIcon } from "./svgIcons";
+import selfIcon from "./images/Icon picture.png";
+import languages from "./images/Language_Collection.png";
+import {ProgressBar} from "./progressBar";
+import { Journey } from "./journey";
 
 export function Panel() {
 
@@ -35,7 +36,7 @@ export function Content(props) {
     return(
         <div id="content">
             <Home />
-            <About loadingDiv={props.loadingDiv}/>
+            <About loadingDiv={props.loadingDiv} journey={props.journey} close={props.close} />
         </div>
     )
 }
@@ -51,23 +52,27 @@ function About(props) {
     return(
         <div className="about">
             <div className="pathContainer">
+                <Journey journey={props.journey} close={props.close}/>
                 <h1 id="pathTitle">Journey of Learning</h1>
-                <div id="mechanical_engineer" className="journeyOuterContainer">
-                    <h1>Mechanical Engineering</h1>
-                    <ProgressBar loadingDiv={props.loadingDiv} />
+                <div className="allJourneys">
+                    <div id="mechanical_engineer" className="journeyOuterContainer">
+                        <h1>Mechanical Engineering</h1>
+                        <ProgressBar loadingDiv={props.loadingDiv} />
+                    </div>
+                    <div id="investment_advisor" className="journeyOuterContainer">
+                        <h1>Investment Advisor</h1>
+                        <ProgressBar loadingDiv={props.loadingDiv} />
+                    </div>
+                    <div id="real_estate" className="journeyOuterContainer">
+                        <h1>Real Estate</h1>
+                        <ProgressBar loadingDiv={props.loadingDiv} />
+                    </div>
+                    <div id="software_engineering" className="journeyOuterContainer">
+                        <h1>Software Engineering</h1>
+                        <ProgressBar loadingDiv={props.loadingDiv} />
+                    </div>
                 </div>
-                <div id="investment_advisor" className="journeyOuterContainer">
-                    <h1>Investment Advisor</h1>
-                    <ProgressBar loadingDiv={props.loadingDiv} />
-                </div>
-                <div id="real_estate" className="journeyOuterContainer">
-                    <h1>Real Estate</h1>
-                    <ProgressBar loadingDiv={props.loadingDiv} />
-                </div>
-                <div id="software_engineering" className="journeyOuterContainer">
-                    <h1>Software Engineering</h1>
-                    <ProgressBar loadingDiv={props.loadingDiv} />
-                </div>
+                
             </div>
             <div className="aboutMeContainer">
                 <h1 id="aboutMeHeader">About <span>Me</span></h1>

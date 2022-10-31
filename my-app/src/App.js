@@ -4,21 +4,24 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
+  // This is the lifted state for the Journey details in the about me component
   let [loader,loaderUpdate] = useState(false);
   let [width,progressStatus] = useState(0);
   let [journeyType,setJourney] = useState(null);
   let [journeyVisible,setVisibility] = useState(false)
 
+  // The async rerender which alters the loading bar of the journeys
   useEffect(() => {
     if (loader) {
         setTimeout(() => {
-          progressStatus(width + 6)
+          progressStatus(width + 2.5)
             setWidth();
-        }, "20")
+        }, "10")
     }
     
 })
 
+// Event handler functions for the lifted up state of the About me Component
   let setWidth = function() {
       let loadDiv = document.getElementById("statusLoader");
       if (loadDiv) {
@@ -46,7 +49,6 @@ function App() {
     setJourney(() => ({
       ...journeyDetails
     }));
-    // console.log(journeyType)
     
     if (!created && statusCheck === "status") {
         loaderUpdate(true)
@@ -57,6 +59,7 @@ function App() {
     } else {
         if (created) created.remove();
         loaderUpdate(false);
+        progressStatus(0);
     }
   }
 
@@ -80,11 +83,11 @@ function App() {
     progressStatus(0);
   }
 
+  // General format of the page
   return (
     <div id="app">
-      <Journey journey={journeyType} close={close}/>
       <Panel />
-      <Content loadingDiv={loadingDiv}/>
+      <Content loadingDiv={loadingDiv} journey={journeyType} close={close}/>
     </div>
   );
 }
