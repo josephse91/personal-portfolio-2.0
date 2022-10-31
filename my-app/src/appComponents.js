@@ -30,19 +30,20 @@ export function Panel() {
     )
 }
 
-export function Content() {
+export function Content(props) {
+
     return(
         <div id="content">
-            <Home />
+            <Home loadingDiv={props.loadingDiv}/>
             <About />
         </div>
     )
 }
 
-function Home() {
+function Home(props) {
     return(
         <div className="home">
-            <ProgressBar />
+            <ProgressBar loadingDiv={props.loadingDiv}/>
         </div>
     )
 }

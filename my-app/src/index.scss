@@ -28,6 +28,7 @@ code {
   display: flex;
   // min-width: 100vw;
   min-height: 100vh;
+  max-height: 100vh;
   align-items: stretch;
 }
 
@@ -39,6 +40,7 @@ code {
   display: flex;
   justify-content:center;
   align-items: center;
+  z-index: -1;
 }
 
 #journey {
