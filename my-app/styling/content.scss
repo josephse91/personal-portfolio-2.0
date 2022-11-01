@@ -11,12 +11,14 @@
 .about {
     background-color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 5rem;
 }
 
 .pathContainer {
     width: 50%;
-    display: flex;
-    align-items: center;
     position: relative;
 }
 
@@ -35,12 +37,14 @@
 }
 .aboutMeContainer {
     padding: 0rem 5rem;
+    width: 40%
 }
 
 #aboutMeHeader {
     display: inline-block;
     font-size: 5rem;
     font-weight: 900;
+    margin-top: 1rem;
 
     span {
         font-size: 5rem;
@@ -49,17 +53,32 @@
     }
 }
 
+#aboutMeText {
+    p {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 200%;
+    }
+}
+
 .allJourneys {
-    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
 }
 .journeyOuterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     h1 {
         text-align: center;
         font-size: 2.5rem;
-        margin-top: 1rem;
         color: $secondAccent;
+        width: 35%;
     }
-    width: 100%;
+    width: 80%;
 }
 
 .journeyTitle {

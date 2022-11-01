@@ -38,6 +38,7 @@ function App() {
     let classes = e.target.className.split(" ");
     let statusCheck = classes[0];
     let selectedClass = classes[1];
+    console.log(e)
 
     let journeySelect = e.target.parentElement.previousSibling.innerHTML;
     let stage = e.target.innerText;

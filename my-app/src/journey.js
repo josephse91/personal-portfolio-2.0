@@ -4,7 +4,6 @@ export let Journey = function(props) {
     let currentJourney = journey.journeySelect
     let stage = journey.stage;
     let close = props.close;
-    console.log(props,journey,currentJourney,stage)
     let me, ia, re, swe;
 
     me = function(stage) {

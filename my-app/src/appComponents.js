@@ -53,7 +53,7 @@ function About(props) {
         <div className="about">
             <div className="pathContainer">
                 <Journey journey={props.journey} close={props.close}/>
-                <h1 id="pathTitle">Journey of Learning</h1>
+                {/* <h1 id="pathTitle">Journey of Learning</h1> */}
                 <div className="allJourneys">
                     <div id="mechanical_engineer" className="journeyOuterContainer">
                         <h1>Mechanical Engineering</h1>
@@ -76,6 +76,21 @@ function About(props) {
             </div>
             <div className="aboutMeContainer">
                 <h1 id="aboutMeHeader">About <span>Me</span></h1>
+                <div id="aboutMeText">
+                    <p>
+                    I’m a born tinkerer. Something about being able to create allows me to feel like I’m leaving my imprint on the world. There's a euphoric feeling about breaking the limits of your own mind. Programming gives me that feeling. 
+                    </p>
+                    
+                    <p>
+                    In 2021, I decided to commit to the App Academy Open curriculum. Being self-taught, I was able to build a strong foundation of engineering principles.
+                    </p>
+
+                    <p>
+                    Outside of coding, I typically gravitate to things that are cerebral. I love poker, Connect 4 and studying sports stats. Every two years, I even test my mental capacity by solving a game called Pokemon Puzzle League. It’s a tradition I’ve carried since I was in grade school. Try it! You won’t regret it!
+                    </p>
+
+                    <p>Feel free to hover into parts of my journey</p>
+                </div>
             </div>
         </div>
     )
